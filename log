@@ -1,0 +1,12 @@
+# Tarea de Sistemas Operativos 1
+# 202001954
+# Necesitamos los recursos para empezar a trabajar 
+docker pull node 
+docker pull npm 
+docker pull [herramienta]
+
+# Construimos la imagen de Docker para el endpoint 
+sudo docker build -t sopesback .
+
+# levantamos el puerto 8080 (ese le dimos a la app)
+sudo docker run -d -p 8080:8080 sopesback

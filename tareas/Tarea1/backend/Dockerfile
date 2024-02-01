@@ -1,17 +1,20 @@
-# Utilizamos la imagen base oficial de Go
-FROM golang:1.16
+# Iniciar imagen basada en Debian
+FROM golang:1.16 as builder
 
-# Establecemos el directorio de trabajo
+# Crear un directorio para la aplicacion
 WORKDIR /app
 
-# Copiamos el código fuente
-COPY . .
+# Copiar los archivos locales del paquete al espacio de trabajo del contenedor
+ADD . /app
 
-# Compilamos la aplicación
-RUN go build -o main .
+# Contruir la aplicacion Go como un binario estatico
+RUN CGO_ENABLED=0 go build -o /main .
 
-# Exponemos el puerto 8080
-EXPOSE 8080
+# Usar una construccion multi-etapa para crear una imagen de produccion
+FROM scratch
 
-# Ejecutamos la aplicación
-CMD ["./main"]
+# Copiar el ejecutable estatico
+COPY --from=builder /main /main
+
+# Ejecutar el binario
+ENTRYPOINT ["/main"]

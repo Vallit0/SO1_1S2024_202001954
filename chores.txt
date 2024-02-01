@@ -1,10 +1,10 @@
 General Tasks 
 [X] Create and Test API 
 [X] Create and Test Frontend 
-[ ] Test Connection 
+[X] Test Connection 
 
 
-[ ] Dockerize Backend 
-[ ] Dockerize Frontend
-[ ] Finish Task 
+[X] Dockerize Backend 
+[X] Dockerize Frontend
+[X] Finish Task 
 [ ] Record Video 
