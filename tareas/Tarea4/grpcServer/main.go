@@ -24,10 +24,10 @@ func connectWithConnector() (*sql.DB, error) {
 	// Cloud Secret Manager (https://cloud.google.com/secret-manager) to help
 	// keep passwords and other secrets safe.
 	var (
-		dbUser                 = " "                             // e.g. 'my-db-user'
-		dbPwd                  = " "                       // e.g. 'my-db-password'
-		dbName                 = " "                           // e.g. 'my-database'
-		instanceConnectionName = " " // e.g. 'project:region:instance'
+		dbUser                 = "sopes"                             // e.g. 'my-db-user'
+		dbPwd                  = "202001954"                       // e.g. 'my-db-password'
+		dbName                 = "votos"                           // e.g. 'my-database'
+		instanceConnectionName = "so1202001954:us-central1:so202001954" // e.g. 'project:region:instance'
 		usePrivate             = ""
 	)
 
