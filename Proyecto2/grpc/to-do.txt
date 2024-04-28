@@ -1,0 +1,13 @@
+[ ] Areglar la entrada de datos al contenedor de locust 10 - 11 
+[ ] Ver que si se encolen los datos 11 - 12 
+[ ] desencolar los datos 12 - 1 
+[ ] Agregar Redis 1 - 2 
+[ ] Agregar Mongo 2 - 3 
+[ ] Agregar Grafana 3 - 4  
+[ ] VueJS (Aplicacion extremadamente simple) 20 minutos 
+
+[ ] Iniciar Kubernetes
+[ ] Generar Archivos .yaml
+[ ] Test de Manera local con Minikube 
+[ ] Crear Cluster de Kubernetes 
+[ ] Deploy app de VueJS  

@@ -1,0 +1,32 @@
+apiVersion: apps/v1  # Corregido aquí, eliminada la 'v' inicial
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.0 (40646f47)
+  labels:
+    io.kompose.service: grpc-client
+  name: grpc-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: grpc-client
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.26.0 (40646f47)
+      labels:
+        io.kompose.service: grpc-client
+    spec:
+      containers:
+        - name: grpc-client
+          image: gcr.io/so1202001954/grpc_grpc-client:tag  # Actualizado con el nombre y la etiqueta correctos
+          ports:
+            - containerPort: 3000
+          resources: {}
+      restartPolicy: Always
+status: {}
+

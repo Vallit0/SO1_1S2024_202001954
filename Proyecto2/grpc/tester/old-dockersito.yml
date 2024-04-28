@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  grpc-server:
+    build:
+      context: ./grpcServer
+    ports:
+      - "3001:3001"
+    depends_on:
+      - kafka
+    networks:
+      - grpc-network
+
+  grpc-client:
+    build:
+      context: ./grpcClient
+    ports:
+      - "3000:3000"  
+    depends_on:
+      - grpc-server
+    networks:
+      - grpc-network
+
+  kafka:
+    image: 'bitnami/kafka:latest'
+    environment:
+      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+      - ALLOW_PLAINTEXT_LISTENER=yes
+      - KAFKA_AUTO_CREATE_TOPICS_ENABLE=true
+    ports:
+      - '9092:9092'
+    depends_on:
+      - zookeeper
+    networks:
+      - grpc-network
+
+  zookeeper:
+    image: 'bitnami/zookeeper:latest'
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+    ports:
+      - "2181:2181"  # Default Zookeeper port
+    networks:
+      - grpc-network
+
+networks:
+  grpc-network:
+    driver: bridge
+

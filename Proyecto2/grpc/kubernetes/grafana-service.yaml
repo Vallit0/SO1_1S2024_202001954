@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.0 (40646f47)
+  labels:
+    io.kompose.service: grafana
+  name: grafana
+spec:
+  type: LoadBalancer  # Especifica que el servicio será del tipo LoadBalancer
+  ports:
+    - name: "grafana"
+      port: 3002        # Puerto externo al que los usuarios se conectarán
+      targetPort: 3000  # Puerto interno del contenedor de Grafana
+  selector:
+    io.kompose.service: grafana
+status:
+  loadBalancer: {}
+
