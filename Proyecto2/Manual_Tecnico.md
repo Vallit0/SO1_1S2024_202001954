@@ -39,16 +39,23 @@ Se detalla la configuración de cada despliegue y servicio de Kubernetes utiliza
 
 - Algunos Deployments Generales:
 - ![image](https://github.com/Vallit0/SO1_1S2024_202001954/assets/79114580/270daaec-0886-4740-b8b5-11ec2d8a7dad)
+- Ingress
+- ![image](https://github.com/Vallit0/SO1_1S2024_202001954/assets/79114580/700a0a8d-d40d-414c-893f-f6fc9ad535ee)
+
 
 - La imagen muestra que el programa "grpc-client" se ha implementado en Kubernetes como un despliegue con una sola réplica. El despliegue se encuentra en estado "Ready", lo que significa que todos los pods del despliegue han sido creados y están listos para ejecutar la aplicación
-- 
+- ![image](https://github.com/Vallit0/SO1_1S2024_202001954/assets/79114580/06ca06cb-b959-432e-84af-7d5153a6d661)
+
 
 
 - ## Replicas y Demas
    ![image](https://github.com/Vallit0/SO1_1S2024_202001954/assets/79114580/e1b09020-b04c-4985-b6a2-618095d24117)
+![image](https://github.com/Vallit0/SO1_1S2024_202001954/assets/79114580/ddc58f07-22c7-4149-b58e-72a338efd62b)
 
 
 ## Ejemplo de Funcionamiento
+![image](https://github.com/Vallit0/SO1_1S2024_202001954/assets/79114580/ab6076e3-0302-48d3-9bb3-4ea61a9b1d31)
+
 ![image](https://github.com/Vallit0/SO1_1S2024_202001954/assets/79114580/f6980e03-393c-4ade-b4f5-fbe22dfb7e32)
 
 ![image](https://github.com/Vallit0/SO1_1S2024_202001954/assets/79114580/5d4131ce-5442-4027-8453-e477a7ab611e)
